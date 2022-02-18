@@ -6,7 +6,7 @@ function NavBar() {
     <Navbar className="color-nav" expand="lg" variant="dark">
       <Container fluid>
         <Navbar.Brand className="text-color" href="#">
-          Pinki
+          PinkiStore
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
