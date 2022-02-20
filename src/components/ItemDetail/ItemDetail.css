@@ -1,0 +1,98 @@
+.items {
+  background-color: hsl(0, 0%, 98%);
+  margin-top: 20px;
+}
+.items__content {
+  gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+.item__image {
+  width: 50%;
+  height: 40rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  float: left;
+}
+
+.item__text {
+  padding-left: 30px;
+  width: 50%;
+  display: grid;
+  color: hsl(233, 8%, 62%);
+}
+
+.item__title {
+  text-align: left;
+  padding-bottom: 20px;
+  font-size: 2rem;
+  color: hsl(233, 26%, 24%);
+}
+
+.item__price {
+  font-size: 1.6rem;
+  color: hsl(233, 26%, 24%);
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+.buttonSizes {
+  margin-right: 5px;
+  padding: 2px 19px;
+  background-color: aliceblue;
+  border-width: 1px;
+  border-radius: 12px;
+  transition: color 100ms;
+  border-style:dotted;
+  box-shadow: 2px;
+  text-align: center;
+  border-color: rgb(187, 187, 187);
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.buttonSizes:hover {
+  color: pink;
+}
+.item__description {
+  padding-bottom: 50px;
+  text-align: left;
+  font-size: 14px;
+  color: hsl(228, 5%, 64%);
+}
+
+.item__talla {
+  font-size: 1.6rem;
+  color: hsl(233, 26%, 24%);
+  text-align: left;
+  padding-bottom: 50px;
+}
+
+.buttonCart{
+    background-color: #EA4C89;
+    border-radius: 5px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    height: 50px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 5px 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}

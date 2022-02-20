@@ -5,3 +5,23 @@
 .text-color {
   color: white
 }
+
+.Boton{
+  margin: 5px;
+  text-decoration: none;
+  color: white;
+}
+.IconCarrito{
+  text-decoration: none;
+  color: white;
+  margin-left: 15px;
+  padding: 5px;
+  
+}
+.IconCarrito:hover{
+  color:rgb(194, 35, 133)
+}
+
+.Boton:hover{
+  color:rgb(194, 35, 133)
+}
