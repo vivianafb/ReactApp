@@ -1,7 +1,8 @@
 import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
 import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
-import {Link, NavLink} from "react-router-dom"
+import { Link, NavLink } from "react-router-dom";
+
 function NavBar() {
   return (
     <Navbar className="color-nav" expand="lg" variant="dark">
@@ -16,13 +17,20 @@ function NavBar() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <NavLink to={"/"} className="Boton">Productos</NavLink>
+            <NavLink to={`/category/1`} className="Boton">
+              Tops
+            </NavLink>
+            <NavLink to={`/category/2`} className="Boton">
+              Bottoms
+            </NavLink>
+            <NavLink to={`/category/3`} className="Boton">
+              Accesorios
+            </NavLink>
           </Nav>
 
           <Form className="d-flex">
             <Button variant="outline-light">Log In</Button>
             <CartWidget />
-
           </Form>
         </Navbar.Collapse>
       </Container>

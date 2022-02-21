@@ -16,7 +16,8 @@ const Rutas = () => {
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
-        
+        <Route path="/category/:categoryId" element={<ItemListContainer />} />
+
       </Routes>
     </BrowserRouter>
   );

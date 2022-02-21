@@ -1,5 +1,6 @@
 import React from "react";
 import "../ItemDetail/ItemDetail.css";
+
 function ItemDetail({ item }) {
   return (
     <section className="items">
@@ -16,12 +17,16 @@ function ItemDetail({ item }) {
             <h3>Talla</h3>
             <button className="buttonSizes">XS</button>
             <button className="buttonSizes">S</button>
-            <button className="buttonSizes" >M</button>
+            <button className="buttonSizes">M</button>
             <button className="buttonSizes">L</button>
             <button className="buttonSizes">XL</button>
           </div>
-          <div className="item__description">Description: {item.description}</div>
-          <div><button className="buttonCart">Agregar al carrito</button></div>
+          <div className="item__description">
+            Description: {item.description}
+          </div>
+          <div>
+            <button className="buttonCart">Agregar al carrito</button>
+          </div>
         </div>
       </div>
     </section>

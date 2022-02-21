@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React  from "react";
 import "./Item.css";
-import { Link } from "react-router-dom";
+
 const Item = ({ product }) => {
   return (
-    <a className="product__item" href= {`item/${product.id}`}>
+    <a className="product__item" href={`/item/${product.id}`}>
       <div
         className="product__image"
         style={{ backgroundImage: `url(${product.image})` }}
