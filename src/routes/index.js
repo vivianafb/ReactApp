@@ -5,6 +5,7 @@ import Cart from "../components/Cart/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "../components/NavBar/NavBar";
 import "../App.css";
+import ItemCount from "../components/NavBar/ItemCount";
 const Rutas = () => {
   return (
     <BrowserRouter>
@@ -17,7 +18,6 @@ const Rutas = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
         <Route path="/category/:categoryId" element={<ItemListContainer />} />
-
       </Routes>
     </BrowserRouter>
   );
