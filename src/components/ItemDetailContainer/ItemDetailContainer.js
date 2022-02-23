@@ -13,7 +13,7 @@ function ItemDetailContainer() {
       price: 12000,
       description:"Polera Lila, 100% algodon",
       category:{id:1, title:"tops"},
-      stock: 20,
+      stock: 10,
     },
     {
       id: 2,
