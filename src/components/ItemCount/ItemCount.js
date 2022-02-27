@@ -1,19 +1,19 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import {CarritoContext} from "../../context/CartProvider";
 import "./ItemCount.css";
-function ItemCount(props) {
+function ItemCount({ stock, item }) {
   const [contador, setContador] = useState(1);
   const [Count, setCount] = useState(false);
-
+  const {addToCarrito} = useContext(CarritoContext)
   function onAdd() {
-    if (contador < props.stock) {
+    if (contador < stock) {
       setContador(contador + 1);
     } else {
       setContador(contador);
     }
   }
   function onRest() {
-    if (contador <= props.stock && contador !== 1) {
+    if (contador <= stock && contador !== 1) {
       setContador(contador - 1);
     } else {
       setContador(contador);
@@ -21,14 +21,14 @@ function ItemCount(props) {
   }
 
   function addToCart() {
-    console.log(contador)
+    console.log(contador);
     setCount(true);
   }
-  return props.stock === 0 ? (
+  return stock === 0 ? (
     <div className="ZeroStock">
       <p>Producto sin stock</p>
     </div>
-  ) : Count === false ? (
+  ) : (
     <div className="divCount">
       <button onClick={onRest} className="buttonCount">
         -
@@ -38,17 +38,9 @@ function ItemCount(props) {
         +
       </button>
       <div>
-        <button className="buttonCart" onClick={addToCart}>
+        <button className="buttonCart" onClick={()=>addToCarrito(item,contador)}>
           Agregar al carrito
         </button>
-      </div>
-    </div>
-  ) : (
-    <div className="divCount">
-      <div>
-        <Link to={"/cart"}>
-          <button className="buttonCart">Finalizar compra</button>
-        </Link>
       </div>
     </div>
   );

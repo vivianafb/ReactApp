@@ -26,7 +26,7 @@ function ItemDetail({ item }) {
           <div className="item__description">
             Description: {item.description}
           </div>
-          <ItemCount stock={item.stock}/>
+          <ItemCount item={item} stock={item.stock}/>
           
         </div>
       </div>
