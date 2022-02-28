@@ -3,7 +3,7 @@ import {CarritoContext} from "../../context/CartProvider";
 import "./ItemCount.css";
 function ItemCount({ stock, item }) {
   const [contador, setContador] = useState(1);
-  const [Count, setCount] = useState(false);
+ 
   const {addToCarrito} = useContext(CarritoContext)
   function onAdd() {
     if (contador < stock) {
@@ -20,10 +20,7 @@ function ItemCount({ stock, item }) {
     }
   }
 
-  function addToCart() {
-    console.log(contador);
-    setCount(true);
-  }
+  
   return stock === 0 ? (
     <div className="ZeroStock">
       <p>Producto sin stock</p>

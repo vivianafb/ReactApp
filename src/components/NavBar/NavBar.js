@@ -7,9 +7,9 @@ function NavBar() {
   return (
     <Navbar className="color-nav" expand="lg" variant="dark">
       <Container fluid>
-        <Navbar.Brand className="text-color" href="/">
+        <Link className="text-color" to={`/`}>
           PinkiStore
-        </Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
