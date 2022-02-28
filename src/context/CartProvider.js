@@ -2,9 +2,7 @@ import { createContext, useState } from "react";
 export const CarritoContext = createContext();
 
 const CartProvider = ({ children, item }) => {
-  const [products, setProducts] = useState([]);
   const [cartItems, setCartItems] = useState([]);
-  const [quantityItems, setQuantityItems] = useState([]);
   const [carrito, setCarrito] = useState([]);
 
   function addToCarrito(item, quantity) {
@@ -12,20 +10,23 @@ const CartProvider = ({ children, item }) => {
 
     if (!resultado) {
       let cantItems = { ...item, quantity };
-      setQuantityItems([...quantityItems, quantity]);
       setCartItems([...cartItems, cantItems]);
     } else {
-       let pro = cartItems.find((i) => i.id === item.id)
+      let pro = cartItems.find((i) => i.id === item.id);
       let total = pro.quantity + quantity;
       
-      let update = cartItems.map((e) => {
+      let newArray = [...cartItems]
+      setCartItems([]);
+      let update = newArray.map((e) => {
         if (e.id === item.id) {
-          return { ...e,quantity: total };
+          return {...e,quantity: total };
         }
-        return cartItems;
+        return newArray;
       });
-      setCartItems(update)
-      console.log(cartItems)
+      
+      setCartItems(update);
+
+      console.log(update);
     }
   }
   function removeItem(itemId) {
@@ -33,11 +34,15 @@ const CartProvider = ({ children, item }) => {
     setCartItems(result);
   }
 
+  function clear(){
+    setCartItems([])
+  }
+
   function isInCart(itemId) {
     return cartItems.some((i) => i.id === itemId);
   }
   return (
-    <CarritoContext.Provider value={{ addToCarrito, carrito, cartItems }}>
+    <CarritoContext.Provider value={{ addToCarrito, carrito, cartItems,clear,removeItem }}>
       {children}
     </CarritoContext.Provider>
   );
