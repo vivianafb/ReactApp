@@ -1,18 +1,18 @@
 import { useContext, useState } from "react";
 import {CarritoContext} from "../../context/CartProvider";
 import "./ItemCount.css";
-function ItemCount({ stock, item }) {
+const ItemCount = ({ stock, item }) => {
   const [contador, setContador] = useState(1);
  
   const {addToCarrito} = useContext(CarritoContext)
-  function onAdd() {
+  const onAdd = () => {
     if (contador < stock) {
       setContador(contador + 1);
     } else {
       setContador(contador);
     }
   }
-  function onRest() {
+  const onRest = () => {
     if (contador <= stock && contador !== 1) {
       setContador(contador - 1);
     } else {

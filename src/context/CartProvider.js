@@ -5,7 +5,7 @@ const CartProvider = ({ children, item }) => {
   const [cartItems, setCartItems] = useState([]);
   const [carrito, setCarrito] = useState([]);
 
-  function addToCarrito(item, quantity) {
+  const addToCarrito = (item, quantity) => {
     let resultado = isInCart(item.id);
 
     if (!resultado) {
@@ -29,16 +29,16 @@ const CartProvider = ({ children, item }) => {
       console.log(update);
     }
   }
-  function removeItem(itemId) {
+  const removeItem = (itemId) => {
     let result = cartItems.filter((element) => element.id !== itemId);
     setCartItems(result);
   }
 
-  function clear(){
+  const clear = () =>{
     setCartItems([])
   }
 
-  function isInCart(itemId) {
+  const isInCart = (itemId) => {
     return cartItems.some((i) => i.id === itemId);
   }
   return (

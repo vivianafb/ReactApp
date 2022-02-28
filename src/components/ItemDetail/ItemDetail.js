@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import "../ItemDetail/ItemDetail.css";
 
-function ItemDetail({ item }) {
+const ItemDetail = ({ item }) => {
 
   return (
     <section className="items">

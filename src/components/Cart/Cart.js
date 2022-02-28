@@ -3,7 +3,7 @@ import Item from "../Item/Item";
 import "./Cart.css";
 import { CarritoContext } from "../../context/CartProvider";
 import { Link } from "react-router-dom";
-function Cart() {
+const Cart = () => {
   const { cartItems, clear, removeItem } = useContext(CarritoContext);
   return cartItems.length ? (
     <div>

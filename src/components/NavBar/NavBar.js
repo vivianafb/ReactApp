@@ -3,7 +3,7 @@ import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link, NavLink } from "react-router-dom";
 
-function NavBar() {
+const NavBar = () => {
   return (
     <Navbar className="color-nav" expand="lg" variant="dark">
       <Container fluid>
