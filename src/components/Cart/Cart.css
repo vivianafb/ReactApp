@@ -1,32 +1,133 @@
+.deleteButton {
+  background-color: #ea4c89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
-.deleteButton{
+.deleteItemFromCart {
+  font-size: 25px;
+  border-radius: 8px;
+  border-style: none;
+  float: right;
+}
 
-    background-color: #EA4C89;
-    border-radius: 8px;
-    border-style: none;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    height: 40px;
-    line-height: 20px;
-    list-style: none;
-    margin: 0;
-    outline: none;
-    padding: 10px 16px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    transition: color 100ms;
-    vertical-align: baseline;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
-  
-  .deleteItemFromCart{
-      float: right;
-  }
+.emptyCart {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.shopNow {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.shopNowButton {
+  margin: 0;
+  width: 100%;
+  background-color: #ea4c89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  list-style: none;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.shopNow:hover {
+  color: white;
+}
+/*  */
+/* 
+ /* */
+
+.cartitems {
+  background-color: hsl(0, 0%, 98%);
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.cartitems__content {
+  gap: 1rem;
+  grid-auto-rows: 15rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.cartitems__image {
+  height: 15rem;
+  width: 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  float: left;
+}
+
+.cartitems__text {
+  padding-left: 30px;
+  width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+
+  display: grid;
+  color: hsl(233, 8%, 62%);
+}
+
+.cartitems__title {
+  text-align: left;
+  padding-bottom: 20px;
+  font-size: 2rem;
+  color: hsl(233, 26%, 24%);
+}
+
+.cartitems__price {
+  font-size: 1.6rem;
+  color: hsl(233, 26%, 24%);
+  text-align: left;
+  padding-bottom: 50px;
+}
+
+.cartitems__quantity {
+  font-size: 1.6rem;
+  color: hsl(233, 26%, 24%);
+  text-align: left;
+  padding-bottom: 50px;
+}
