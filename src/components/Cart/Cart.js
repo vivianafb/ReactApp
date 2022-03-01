@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Item from "../Item/Item";
 import "./Cart.css";
 import { CarritoContext } from "../../context/CartProvider";
 import { Link } from "react-router-dom";
 const Cart = () => {
-  const { cartItems, clear, removeItem } = useContext(CarritoContext);
+  const { cartItems, clear, removeItem, total } = useContext(CarritoContext);
+
   return cartItems.length ? (
     <div>
       <div className="cart__grid">
@@ -19,13 +20,14 @@ const Cart = () => {
                   x
                 </button>
               </div>
-              <div className="cartitems__image"
-              style={{ backgroundImage: `url(${e.image})` }}>
-                
-              </div>
+              <div
+                className="cartitems__image"
+                style={{ backgroundImage: `url(${e.image})` }}
+              ></div>
               <div className="cartitems__text">
                 <div className="cartitems__title">{e.name}</div>
                 <div className="cartitems__price">${e.price}</div>
+                <h1>{e.totalPrice}</h1>
 
                 <div className="cartitems__quantity">
                   Cantidad: {e.quantity}
@@ -34,6 +36,10 @@ const Cart = () => {
             </div>
           </section>
         ))}
+      </div>
+
+      <div className="container divTotal">
+        <h1 className="totalCart">Total:{total}</h1>
       </div>
       <button className="deleteButton" onClick={clear}>
         Borrar todo
@@ -52,6 +58,6 @@ const Cart = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Cart;

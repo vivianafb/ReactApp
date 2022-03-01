@@ -4,7 +4,7 @@ import "./ItemCount.css";
 const ItemCount = ({ stock, item }) => {
   const [contador, setContador] = useState(1);
  
-  const {addToCarrito} = useContext(CarritoContext)
+  const {addToCarrito,sumTotal} = useContext(CarritoContext)
   const onAdd = () => {
     if (contador < stock) {
       setContador(contador + 1);

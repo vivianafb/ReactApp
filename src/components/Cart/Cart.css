@@ -131,3 +131,11 @@
   text-align: left;
   padding-bottom: 50px;
 }
+
+.totalCart {
+  text-align: right;
+}
+
+.divTotal {
+  max-width: 1320px;
+}
