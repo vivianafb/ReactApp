@@ -3,7 +3,6 @@ export const CarritoContext = createContext();
 
 const CartProvider = ({ children, item }) => {
   const [cartItems, setCartItems] = useState([]);
-  const [carrito, setCarrito] = useState([]);
 
   const addToCarrito = (item, quantity) => {
     let resultado = isInCart(item.id);
@@ -14,19 +13,18 @@ const CartProvider = ({ children, item }) => {
     } else {
       let pro = cartItems.find((i) => i.id === item.id);
       let total = pro.quantity + quantity;
+      pro = {...pro,quantity:total}
       
-      let newArray = [...cartItems]
-      setCartItems([]);
-      let update = newArray.map((e) => {
+      // setCartItems([]);
+      let update = cartItems.map((e) => {
         if (e.id === item.id) {
-          return {...e,quantity: total };
+         e = pro
         }
-        return newArray;
+        return e;
       });
       
       setCartItems(update);
 
-      console.log(update);
     }
   }
   const removeItem = (itemId) => {
@@ -42,7 +40,7 @@ const CartProvider = ({ children, item }) => {
     return cartItems.some((i) => i.id === itemId);
   }
   return (
-    <CarritoContext.Provider value={{ addToCarrito, carrito, cartItems,clear,removeItem }}>
+    <CarritoContext.Provider value={{ addToCarrito, cartItems,clear,removeItem }}>
       {children}
     </CarritoContext.Provider>
   );
