@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
-function ItemDetailContainer() {
+const ItemDetailContainer = () => {
   const {id} = useParams();
   const productos = [
     {
@@ -13,7 +13,7 @@ function ItemDetailContainer() {
       price: 12000,
       description:"Polera Lila, 100% algodon",
       category:{id:1, title:"tops"},
-      stock: 20,
+      stock: 10,
     },
     {
       id: 2,

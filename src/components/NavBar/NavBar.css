@@ -3,7 +3,11 @@
 }
 
 .text-color {
+  text-decoration: none;
   color: white
+}
+.text-color:hover{
+  color:rgb(194, 35, 133)
 }
 
 .Boton{
