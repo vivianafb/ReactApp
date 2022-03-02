@@ -1,14 +1,21 @@
 import { createContext, useEffect, useState } from "react";
+import ModalDetail from "../components/Modal/ModalDetail";
 export const CarritoContext = createContext();
-
 const CartProvider = ({ children, item }) => {
   const [cartItems, setCartItems] = useState([]);
   const [total, setTotal] = useState(0);
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+ 
   useEffect(() => {
     const totalPrice = [];
 
-    cartItems.map((element) => totalPrice.push(element.price * element.quantity));
+    cartItems.map((element) =>
+      totalPrice.push(element.price * element.quantity)
+    );
 
     let sum = 0;
     for (let i = 0; i < totalPrice.length; i++) {
@@ -18,6 +25,7 @@ const CartProvider = ({ children, item }) => {
   });
 
   const addToCarrito = (item, quantity) => {
+
     let resultado = isInCart(item.id);
 
     if (!resultado) {
@@ -48,12 +56,18 @@ const CartProvider = ({ children, item }) => {
     setCartItems([]);
   };
 
+ 
   const isInCart = (itemId) => {
     return cartItems.some((i) => i.id === itemId);
   };
+  
+  const currentItem = (itemId) =>{
+    let product = cartItems.find((i) => i.id === itemId);
+    console.log(product)
+  }
   return (
     <CarritoContext.Provider
-      value={{ addToCarrito, cartItems, clear, removeItem, total }}
+      value={{ addToCarrito, cartItems, clear, removeItem, total,show,handleClose,handleShow,item}}
     >
       {children}
     </CarritoContext.Provider>

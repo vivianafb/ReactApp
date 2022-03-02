@@ -1,26 +1,29 @@
 import { useContext, useState } from "react";
-import {CarritoContext} from "../../context/CartProvider";
+import { Button, Modal } from "react-bootstrap";
+import { CarritoContext } from "../../context/CartProvider";
+import ModalDetail from "../Modal/ModalDetail";
 import "./ItemCount.css";
 const ItemCount = ({ stock, item }) => {
+
   const [contador, setContador] = useState(1);
- 
-  const {addToCarrito,sumTotal} = useContext(CarritoContext)
+
+
+  const { addToCarrito, sumTotal, addModal,handleShow,handleClose,show } = useContext(CarritoContext);
   const onAdd = () => {
     if (contador < stock) {
       setContador(contador + 1);
     } else {
       setContador(contador);
     }
-  }
+  };
   const onRest = () => {
     if (contador <= stock && contador !== 1) {
       setContador(contador - 1);
     } else {
       setContador(contador);
     }
-  }
+  };
 
-  
   return stock === 0 ? (
     <div className="ZeroStock">
       <p>Producto sin stock</p>
@@ -35,12 +38,20 @@ const ItemCount = ({ stock, item }) => {
         +
       </button>
       <div>
-        <button className="buttonCart" onClick={()=>addToCarrito(item,contador)}>
+        <button
+          className="buttonCart"
+          onClick={() => {
+            addToCarrito(item, contador);
+            handleShow();
+          }}
+        >
           Agregar al carrito
         </button>
+          
       </div>
+     <ModalDetail item={item}/>
     </div>
   );
-}
+};
 
 export default ItemCount;
