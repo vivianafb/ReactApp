@@ -29,7 +29,6 @@ const NavBar = () => {
           </Nav>
 
           <Form className="d-flex">
-            <Button variant="outline-light">Log In</Button>
             <CartWidget />
           </Form>
         </Navbar.Collapse>
