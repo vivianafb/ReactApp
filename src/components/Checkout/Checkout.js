@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import "./Checkout.css";
 import useFireStore from "../../hooks/useFireStore";
-import { Link } from "react-router-dom";
+import { CarritoContext } from "../../context/CartProvider";
+import { useNavigate } from "react-router-dom";
 const Checkout = ({ cartItems, total }) => {
   const { generateOrder } = useFireStore();
+  const { clear } = useContext(CarritoContext);
+
   const [form, setForm] = useState({
     buyer: {
       name: "",
@@ -28,6 +31,7 @@ const Checkout = ({ cartItems, total }) => {
   const hanlderSubmit = (e) => {
     e.preventDefault();
     generateOrder({ data: form });
+    
   };
   return (
     <div className="divContainer ">
@@ -64,6 +68,7 @@ const Checkout = ({ cartItems, total }) => {
           disabled={!form.buyer.name || !form.buyer.phone || !form.buyer.email}
           variant="dark"
           type="submit"
+          
         >
           Comprar
         </Button>

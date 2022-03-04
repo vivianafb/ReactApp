@@ -8,10 +8,12 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import db from "../firebase";
+import { useNavigate } from "react-router-dom";
 const useFireStore = () => {
   const [products, setProducts] = useState([]);
   const [productsDetail, setProductsDetail] = useState({});
   const [order, setOrder] = useState([]);
+  let navigate = useNavigate()
 
   const getData = async ({ categoryId }) => {
     try {
@@ -49,9 +51,8 @@ const useFireStore = () => {
   const generateOrder = async ({ data }) => {
     try {
       const col = collection(db, "orders");
-      const result = await addDoc(col, data);
-      setOrder(result);
-
+      await addDoc(col, data);
+      setOrder(data)
       data.items.map((e) => {
         updatingStock(e.id, e.stock - e.quantity);
       });
@@ -62,11 +63,12 @@ const useFireStore = () => {
 
   const updatingStock = async (id, stock) => {
     const itemsOrder = doc(db, "items", id);
-    const response = await getDoc(itemsOrder);
+    
 
-    console.log(response.data());
     try {
       await updateDoc(itemsOrder, { stock: stock });
+      let path = '/order'
+    navigate(path)
     } catch (err) {
       console.log(err);
     }
@@ -76,6 +78,7 @@ const useFireStore = () => {
     getData,
     products,
     productsDetail,
+    order,
     generateOrder,
     getById,
   };

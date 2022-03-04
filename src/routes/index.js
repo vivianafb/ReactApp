@@ -4,6 +4,7 @@ import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailCon
 import Cart from "../components/Cart/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "../components/NavBar/NavBar";
+import Order from "../components/Order/Order";
 import "../App.css";
 const Rutas = () => {
   return (
@@ -16,6 +17,8 @@ const Rutas = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
         <Route path="/category/:categoryId" element={<ItemListContainer />} />
+        <Route path="/order" element={<Order />} />
+
       </Routes>
     </BrowserRouter>
   );
