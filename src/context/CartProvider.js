@@ -9,7 +9,7 @@ const CartProvider = ({ children, item }) => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
- 
+
   useEffect(() => {
     const totalPrice = [];
 
@@ -25,7 +25,6 @@ const CartProvider = ({ children, item }) => {
   });
 
   const addToCarrito = (item, quantity) => {
-
     let resultado = isInCart(item.id);
 
     if (!resultado) {
@@ -34,8 +33,6 @@ const CartProvider = ({ children, item }) => {
     } else {
       let pro = cartItems.find((i) => i.id === item.id);
       let cantidadTotal = pro.quantity + quantity;
-      // let precioTotal = pro.price * cantidadTotal;
-      // console.log(precioTotal);
       pro = { ...pro, quantity: cantidadTotal };
       let update = cartItems.map((e) => {
         if (e.id === item.id) {
@@ -56,18 +53,23 @@ const CartProvider = ({ children, item }) => {
     setCartItems([]);
   };
 
- 
   const isInCart = (itemId) => {
     return cartItems.some((i) => i.id === itemId);
   };
-  
-  const currentItem = (itemId) =>{
-    let product = cartItems.find((i) => i.id === itemId);
-    console.log(product)
-  }
+
   return (
     <CarritoContext.Provider
-      value={{ addToCarrito, cartItems, clear, removeItem, total,show,handleClose,handleShow,item}}
+      value={{
+        addToCarrito,
+        cartItems,
+        clear,
+        removeItem,
+        total,
+        show,
+        handleClose,
+        handleShow,
+        item,
+      }}
     >
       {children}
     </CarritoContext.Provider>

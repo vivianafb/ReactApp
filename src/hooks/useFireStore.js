@@ -46,17 +46,6 @@ const useFireStore = () => {
     }
   };
 
-  // const getOrderById = async ({ id }) => {
-  //   try {
-  //     const document = doc(db, "orders", id);
-  //     const response = await getDoc(document);
-  //     const result = { id: response.id, ...response.data() };
-  //     setOrder(result);
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-
   const generateOrder = async ({ data }) => {
     try {
       const col = collection(db, "orders");
