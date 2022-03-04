@@ -64,19 +64,18 @@ const useFireStore = () => {
       setOrder(result);
 
       data.items.map((e) => {
-        // console.log(order.id, e.stock - e.quantity)
-       updatingStock(e.id, e.stock - e.quantity);
+        updatingStock(e.id, e.stock - e.quantity);
       });
     } catch (err) {
       console.log(err);
     }
   };
 
-  const updatingStock = async (id,stock) => {
+  const updatingStock = async (id, stock) => {
     const itemsOrder = doc(db, "items", id);
     const response = await getDoc(itemsOrder);
 
-    console.log(response.data())
+    console.log(response.data());
     try {
       await updateDoc(itemsOrder, { stock: stock });
     } catch (err) {

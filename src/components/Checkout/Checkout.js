@@ -27,12 +27,11 @@ const Checkout = ({ cartItems, total }) => {
 
   const hanlderSubmit = (e) => {
     e.preventDefault();
-    generateOrder({data:form})
-    
+    generateOrder({ data: form });
   };
   return (
     <div className="divContainer ">
-      <Form onSubmit={hanlderSubmit} >
+      <Form onSubmit={hanlderSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label className="label">Name</Form.Label>
           <Form.Control
@@ -47,7 +46,7 @@ const Checkout = ({ cartItems, total }) => {
           <Form.Control
             onChange={handleChange}
             name="phone"
-             value={form.buyer.phone}
+            value={form.buyer.phone}
             type="text"
           />
         </Form.Group>
@@ -61,7 +60,6 @@ const Checkout = ({ cartItems, total }) => {
           />
         </Form.Group>
 
-        
         <Button
           disabled={!form.buyer.name || !form.buyer.phone || !form.buyer.email}
           variant="dark"
