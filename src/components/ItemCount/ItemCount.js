@@ -3,6 +3,7 @@ import { Button, Modal } from "react-bootstrap";
 import { CarritoContext } from "../../context/CartProvider";
 import ModalDetail from "../Modal/ModalDetail";
 import "./ItemCount.css";
+
 const ItemCount = ({ stock, item }) => {
 
   const [contador, setContador] = useState(1);
