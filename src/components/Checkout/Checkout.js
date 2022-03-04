@@ -19,6 +19,7 @@ const Checkout = ({ cartItems, total }) => {
   });
 
   const handleChange = (e) => {
+    
     setForm({
       ...form,
       buyer: {
@@ -31,6 +32,7 @@ const Checkout = ({ cartItems, total }) => {
   const hanlderSubmit = (e) => {
     e.preventDefault();
     generateOrder({ data: form });
+    clear()
     
   };
   return (

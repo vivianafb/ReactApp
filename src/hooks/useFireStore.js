@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 const useFireStore = () => {
   const [products, setProducts] = useState([]);
   const [productsDetail, setProductsDetail] = useState({});
-  const [order, setOrder] = useState([]);
+  const [orderCart, setOrderCart] = useState([]);
   let navigate = useNavigate()
 
   const getData = async ({ categoryId }) => {
@@ -52,7 +52,7 @@ const useFireStore = () => {
     try {
       const col = collection(db, "orders");
       await addDoc(col, data);
-      setOrder(data)
+      setOrderCart(data)
       data.items.map((e) => {
         updatingStock(e.id, e.stock - e.quantity);
       });
@@ -78,7 +78,7 @@ const useFireStore = () => {
     getData,
     products,
     productsDetail,
-    order,
+    orderCart,
     generateOrder,
     getById,
   };
