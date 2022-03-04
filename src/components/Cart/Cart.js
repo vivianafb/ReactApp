@@ -1,14 +1,16 @@
-import React, { useContext, useState } from "react";
-import Item from "../Item/Item";
+import React, { useContext } from "react";
+
 import "./Cart.css";
 import { CarritoContext } from "../../context/CartProvider";
 import { Link } from "react-router-dom";
+import Checkout from "../Checkout/Checkout";
 const Cart = () => {
   const { cartItems, clear, removeItem, total } = useContext(CarritoContext);
 
   return cartItems.length ? (
     <div>
       <div className="cart__grid">
+        <Checkout cartItems={cartItems} total={total} />
         {cartItems.map((e) => (
           <section className="cartitems">
             <div className="cartitems__content container container--pall">
@@ -50,11 +52,9 @@ const Cart = () => {
       <div className="textCart">
         <img src="https://img.icons8.com/ios/50/000000/shopping-cart.png" />{" "}
         <h3>Tu carrito esta vacio</h3>
-        <button className="shopNowButton">
-          <Link to={"/"} className="shopNow">
-            Comprar ahora
-          </Link>
-        </button>
+        <Link to={"/"} className="shopNow">
+          <button className="shopNowButton">Comprar ahora</button>
+        </Link>
       </div>
     </div>
   );

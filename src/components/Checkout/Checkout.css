@@ -1,0 +1,10 @@
+.divContainer{
+    max-width: 25%;
+    margin-right: 20px;
+    margin-left: 20px;
+
+    float:left;
+}
+.label{
+    float: left;
+}
