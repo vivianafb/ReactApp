@@ -1,43 +1,38 @@
+.divCount {
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 12px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
 
-.divCount{
-    text-align: left;
-    padding: 10px;
-    margin-bottom: 12px;
-  }
-  
-  .buttonCount{
-    margin-right: 5px;
-    padding: 2px 19px;
-    background-color: rgb(243, 245, 247);
-    border-width: 1px;
-    border-radius: 12px;
-    transition: color 100ms;
-    box-shadow: 2px;
-    text-align: center;
-    border-color: rgb(224, 218, 218);
-    display: inline-block;
-    box-sizing: border-box;
-    font-size: 14px;
-    border-width:1px;
-    border-style:solid;
-  
-  }
+.buttonCount {
+  margin-right: 5px;
+  padding: 2px 19px;
+  background-color: rgb(243, 245, 247);
+  border-width: 1px;
+  border-radius: 12px;
+  transition: color 100ms;
+  box-shadow: 2px;
+  text-align: center;
+  border-color: rgb(224, 218, 218);
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-width: 1px;
+  border-style: solid;
+}
 
-  
-  
-  .inputCount{
-    width: 5%;
-    text-align: center;
-    box-sizing: border-box;
-    border-color: rgb(187, 187, 187);
-    display: inline-block;
-    border-width:1px;
-    border-style:none;
-  
-  }
+.inputCount {
+  width: 5%;
+  text-align: center;
+  box-sizing: border-box;
+  border-color: rgb(187, 187, 187);
+  display: inline-block;
+  border-width: 1px;
+  border-style: none;
+}
 
-  .ZeroStock{
-    text-align: left;
-
-
-  }
+.ZeroStock {
+  text-align: left;
+}

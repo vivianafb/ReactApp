@@ -1,9 +1,6 @@
-.modal {
+.title {
+  margin-bottom: 30px;
+  margin-top: 200px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-}
-
-.link {
-  text-decoration: none;
-  color: white;
 }

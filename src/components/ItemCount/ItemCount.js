@@ -5,11 +5,10 @@ import ModalDetail from "../Modal/ModalDetail";
 import "./ItemCount.css";
 
 const ItemCount = ({ stock, item }) => {
-
   const [contador, setContador] = useState(1);
 
-
-  const { addToCarrito, sumTotal, addModal,handleShow,handleClose,show } = useContext(CarritoContext);
+  const { addToCarrito, sumTotal, addModal, handleShow, handleClose, show } =
+    useContext(CarritoContext);
   const onAdd = () => {
     if (contador < stock) {
       setContador(contador + 1);
@@ -48,9 +47,8 @@ const ItemCount = ({ stock, item }) => {
         >
           Agregar al carrito
         </button>
-          
       </div>
-     <ModalDetail item={item}/>
+      <ModalDetail item={item} />
     </div>
   );
 };

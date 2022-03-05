@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import "./Checkout.css";
 import useFireStore from "../../hooks/useFireStore";
@@ -19,7 +19,6 @@ const Checkout = ({ cartItems, total }) => {
   });
 
   const handleChange = (e) => {
-    
     setForm({
       ...form,
       buyer: {
@@ -32,8 +31,7 @@ const Checkout = ({ cartItems, total }) => {
   const hanlderSubmit = (e) => {
     e.preventDefault();
     generateOrder({ data: form });
-    clear()
-    
+    clear();
   };
   return (
     <div className="divContainer ">
@@ -70,7 +68,6 @@ const Checkout = ({ cartItems, total }) => {
           disabled={!form.buyer.name || !form.buyer.phone || !form.buyer.email}
           variant="dark"
           type="submit"
-          
         >
           Comprar
         </Button>

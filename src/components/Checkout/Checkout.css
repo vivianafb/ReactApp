@@ -1,10 +1,11 @@
-.divContainer{
-    max-width: 25%;
-    margin-right: 20px;
-    margin-left: 20px;
-
-    float:left;
+.divContainer {
+  max-width: 25%;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  float: left;
 }
-.label{
-    float: left;
+.label {
+  float: left;
 }

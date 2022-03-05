@@ -25,6 +25,6 @@ const CartWidget = () => {
       {cartItems.length}
     </Link>
   );
-}
+};
 
 export default CartWidget;

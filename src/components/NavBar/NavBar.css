@@ -4,28 +4,31 @@
 
 .text-color {
   text-decoration: none;
-  color: white
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-.text-color:hover{
-  color:rgb(194, 35, 133)
+.text-color:hover {
+  color: rgb(194, 35, 133);
 }
 
-.Boton{
+.Boton {
   margin: 5px;
   text-decoration: none;
   color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-.IconCarrito{
+.IconCarrito {
   text-decoration: none;
   color: white;
   margin-left: 15px;
   padding: 5px;
-  
 }
-.IconCarrito:hover{
-  color:rgb(194, 35, 133)
+.IconCarrito:hover {
+  color: rgb(194, 35, 133);
 }
 
-.Boton:hover{
-  color:rgb(194, 35, 133)
+.Boton:hover {
+  color: rgb(194, 35, 133);
 }

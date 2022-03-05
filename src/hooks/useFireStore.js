@@ -13,7 +13,7 @@ const useFireStore = () => {
   const [products, setProducts] = useState([]);
   const [productsDetail, setProductsDetail] = useState({});
   const [orderCart, setOrderCart] = useState([]);
-  let navigate = useNavigate()
+  let navigate = useNavigate();
 
   const getData = async ({ categoryId }) => {
     try {
@@ -52,7 +52,6 @@ const useFireStore = () => {
     try {
       const col = collection(db, "orders");
       await addDoc(col, data);
-      setOrderCart(data)
       data.items.map((e) => {
         updatingStock(e.id, e.stock - e.quantity);
       });
@@ -61,14 +60,14 @@ const useFireStore = () => {
     }
   };
 
+  
   const updatingStock = async (id, stock) => {
     const itemsOrder = doc(db, "items", id);
-    
 
     try {
       await updateDoc(itemsOrder, { stock: stock });
-      let path = '/order'
-    navigate(path)
+        let path = '/order'
+      navigate(path)
     } catch (err) {
       console.log(err);
     }

@@ -51,7 +51,7 @@ const Cart = () => {
     <div className="emptyCart">
       <div className="textCart">
         <img src="https://img.icons8.com/ios/50/000000/shopping-cart.png" />{" "}
-        <h3>Tu carrito esta vacio</h3>
+        <h3 className="h3empy">Tu carrito esta vacio</h3>
         <Link to={"/"} className="shopNow">
           <button className="shopNowButton">Comprar ahora</button>
         </Link>

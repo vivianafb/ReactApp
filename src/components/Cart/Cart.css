@@ -1,4 +1,6 @@
 .deleteButton {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   background-color: #ea4c89;
   border-radius: 8px;
   border-style: none;
@@ -43,7 +45,6 @@
 
 .shopNow {
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
 
@@ -138,4 +139,9 @@
 
 .divTotal {
   max-width: 1320px;
+}
+
+.h3empy {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }

@@ -3,6 +3,8 @@
   margin-top: 20px;
 }
 .items__content {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   gap: 1rem;
   grid-auto-rows: 22rem;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -44,7 +46,7 @@
   border-width: 1px;
   border-radius: 12px;
   transition: color 100ms;
-  border-style:solid;
+  border-style: solid;
   box-shadow: 2px;
   text-align: center;
   border-color: rgb(187, 187, 187);
@@ -69,30 +71,30 @@
   padding-bottom: 50px;
 }
 
-.buttonCart{
-    background-color: #EA4C89;
-    border-radius: 5px;
-    border-style: none;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    height: 50px;
-    line-height: 20px;
-    list-style: none;
-    margin: 0;
-    outline: none;
-    padding: 5px 30px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    float: left;
-    transition: color 100ms;
-    vertical-align: baseline;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    margin-top: 20px;
+.buttonCart {
+  background-color: #ea4c89;
+  border-radius: 5px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  height: 50px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 5px 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  float: left;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 20px;
 }

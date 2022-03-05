@@ -1,16 +1,12 @@
-import React from 'react'
-import useFireStore from '../../hooks/useFireStore';
-
+import React from "react";
+import "./Order.css";
 const Order = () => {
-    const { orderCart } = useFireStore();
-     console.log(orderCart)
   return (
     <div>
-        <h1>Tu compra ha sido exitosa!</h1>
-        <p>{orderCart}</p>
-
+      <h1 className="title">Tu compra ha sido exitosa!</h1>
+      <img src="https://img.icons8.com/external-phatplus-lineal-color-phatplus/64/000000/external-cart-commerce-phatplus-lineal-color-phatplus.png" />
     </div>
-  )
-}
+  );
+};
 
-export default Order
+export default Order;

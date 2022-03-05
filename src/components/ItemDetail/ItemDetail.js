@@ -4,7 +4,6 @@ import ItemCount from "../ItemCount/ItemCount";
 import "../ItemDetail/ItemDetail.css";
 
 const ItemDetail = ({ item }) => {
-
   return (
     <section className="items">
       <div className="items__content container container--pall">
@@ -26,12 +25,11 @@ const ItemDetail = ({ item }) => {
           <div className="item__description">
             Description: {item.description}
           </div>
-          <ItemCount item={item} stock={item.stock}/>
-          
+          <ItemCount item={item} stock={item.stock} />
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default ItemDetail;

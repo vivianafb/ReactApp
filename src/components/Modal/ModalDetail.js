@@ -8,7 +8,7 @@ const ModalDetail = ({ item }) => {
 
   return (
     <>
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} className="modal">
         <Modal.Header closeButton>
           <Modal.Title>Producto agregado con exito</Modal.Title>
         </Modal.Header>
