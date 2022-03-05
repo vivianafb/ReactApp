@@ -16,6 +16,7 @@ const Checkout = ({ cartItems, total }) => {
     },
     items: cartItems,
     total: total,
+    date:Date.now()
   });
 
   const handleChange = (e) => {
@@ -51,7 +52,7 @@ const Checkout = ({ cartItems, total }) => {
             onChange={handleChange}
             name="phone"
             value={form.buyer.phone}
-            type="text"
+            type="number"
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
